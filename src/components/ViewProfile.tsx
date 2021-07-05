@@ -14,6 +14,8 @@ const ViewProfile = () => {
   const data: EmployeeTypes = useSelector((state: State) => state.bank);
   const { id } = useParams<{ id: string }>();
 
+  console.log(id);
+
 
   const selectedEmployee: Employees | any = data.employees.find((element) => {
     return element.id.toString() === id;

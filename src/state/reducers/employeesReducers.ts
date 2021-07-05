@@ -12,7 +12,12 @@ const employeesReducer = (state = initialState, action: Action) => {
       return {
         ...state,
         employees: action.payload,
-      };
+      }
+    case ActionType.FAIL: 
+      return {
+        ...state,
+        employees: []
+      }
     default:
       return state;
   }

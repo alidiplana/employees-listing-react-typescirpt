@@ -15,6 +15,12 @@ export const fetchEmployees = () => {
             payload: res.data,
           });
         }
+        else if(res.status){
+          return dispatch({
+            type: ActionType.FAIL,
+            payload: [],
+          })
+        }
       });
   };
 };
